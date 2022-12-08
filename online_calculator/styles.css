@@ -1,0 +1,30 @@
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+    
+}
+
+.container {
+    margin: 0px;
+    height: 1020px;
+    width: 100%;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc-container {
+    height: 400px;
+    width: 300px;
+    background-color: lightblue;
+}

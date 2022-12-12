@@ -24,5 +24,11 @@ const operate = function(operator, a, b) {
     if (operator === divide) return divide(a, b);
 }
 
-        
-    
+
+digitButton = document.querySelectorAll('#digits');
+
+inputBar = document.querySelector('#input-display');
+
+digitButton.forEach(btn=>btn.addEventListener("click", () => {
+    console.log('4');
+}));

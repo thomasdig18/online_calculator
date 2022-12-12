@@ -25,10 +25,18 @@ const operate = function(operator, a, b) {
 }
 
 
-digitButton = document.querySelectorAll('#digits');
+var digitButtons = document.querySelectorAll('#digits');
 
-inputBar = document.querySelector('#input-display');
+var inputBar = document.querySelector('#input-display');
 
-digitButton.forEach(btn=>btn.addEventListener("click", () => {
-    console.log('4');
-}));
+digitButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        var buttonValue = button.getAttribute('value');
+
+        var inputBar = document.querySelector('#input-display');
+        inputBar.value = buttonValue;
+    });
+});
+
+
+

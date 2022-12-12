@@ -33,10 +33,17 @@ digitButtons.forEach(function(button) {
     button.addEventListener('click', function() {
         var buttonValue = button.getAttribute('value');
 
-        var inputBar = document.querySelector('#input-display');
-        inputBar.value = buttonValue;
+        inputBar.value += buttonValue;
+
+        displayValue = inputBar.value;
     });
 });
 
+var clearButton = document.querySelector('#clear');
 
+clearButton.addEventListener('click', () => {
+    var buttonValue = clearButton.getAttribute('value');
+    inputBar.value = buttonValue;
+    displayValue = inputBar.value;
+});
 

@@ -27,10 +27,34 @@ body {
     height: 400px;
     width: 300px;
     background-color: lightblue;
+    border: 5px solid black;
     border-radius: 5px;
     position: relative;
 
 }
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#input-display {
+    height: 35px;
+    border: 4px solid gray;
+    border-radius: 5px;
+}
+
+#clear {
+    width: 90px;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    font-family: Arial;
+    font-size: 20px;
+}
+
 
 .digit-container {
     height: 350px;

@@ -17,7 +17,7 @@ body {
     margin: 0px;
     height: 1020px;
     width: 100%;
-    background-color: brown;
+    background: linear-gradient(180deg, brown, bisque);
     display: flex;
     justify-content: center;
     align-items: center;

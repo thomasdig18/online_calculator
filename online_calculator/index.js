@@ -134,14 +134,3 @@ const calculateResult = function() {
   };
 
 
-const equalSignButton = document.querySelector('#equal-sign');
-
-// Add an event listener for the equal sign button
-equalSignButton.addEventListener('click', function() {
-  // Calculate the result from the input array
-  let result = calculateResult();
-  // Update the input bar with the result
-  inputBar.value = result;
-  // Clear the input array
-  inputArray = [];
-});

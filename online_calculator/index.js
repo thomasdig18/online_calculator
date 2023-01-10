@@ -27,8 +27,15 @@ const operate = function(operator, a, b) {
 
 var digitButtons = document.querySelectorAll('#digits');
 
+
+
+
+
+
 var inputBar = document.querySelector('#input-display');
 
+const addDigit = () => {
 
+}
 
 

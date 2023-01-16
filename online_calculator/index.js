@@ -24,18 +24,57 @@ const operate = function(operator, a, b) {
     if (operator === divide) return divide(a, b);
 }
 
+var inputBar = document.getElementById("input-display");
+var buttons = document.getElementById("buttons");
+var clearButton = document.getElementById("clear");
+var equalsButton = document.getElementById("equals");
 
-var digitButtons = document.querySelectorAll('#digits');
+for (var i = 0; i <= 9; i++) {
+    var button = document.createElement("button");
+    button.innerHTML = i;
+    button.value = i;
+    buttons.appendChild(button);
 
+    button.addEventListener("click", function() {
+      inputBar.value += this.value;
+    });
+  }
 
+clearButton.addEventListener("click", function(){
+    inputBar.value = "";
+});
 
+equalsButton.addEventListener("click", function(){
+    var input = inputBar.value;
+    var inputArray = input.split(" ");
 
-
-
-var inputBar = document.querySelector('#input-display');
-
-const addDigit = () => {
-
-}
+    for(let i = 0; i < inputArray.length; i++){
+        if(inputArray[i] === "+"){
+            inputArray[i] = operate(add, inputArray[i-1], inputArray[i+1]);
+            inputArray.splice(i-1, 1);
+            inputArray.splice(i, 1);
+            i = i - 1;
+        }
+        if(inputArray[i] === "-"){
+            inputArray[i] = operate(subtract, inputArray[i-1], inputArray[i+1]);
+            inputArray.splice(i-1, 1);
+            inputArray.splice(i, 1);
+            i = i - 1;
+        }
+        if(inputArray[i] === "*"){
+            inputArray[i] = operate(multiply, inputArray[i-1], inputArray[i+1]);
+            inputArray.splice(i-1, 1);
+            inputArray.splice(i, 1);
+            i = i - 1;
+        }
+        if(inputArray[i] === "/"){
+            inputArray[i] = operate(divide, inputArray[i-1], inputArray[i+1]);
+            inputArray.splice(i-1, 1);
+            inputArray.splice(i, 1);
+            i = i - 1;
+        }
+    }
+    inputBar.value = inputArray[0];
+  });
 
 
